@@ -19,3 +19,7 @@ For Canyon Outdoor, these patterns translate into a lighter, clearer visual rhyt
 ## Final Revision Verification
 
 The site now uses a more legible DM Sans type system, a one-piece logo-and-name navigation bar, and no standalone “Start a Project” action in the header. The primary comparison uses an edited concept generated from the exact source property image, preserving the same built form and viewpoint while adding credible layered planting, paths, a reflecting water element, and firelight. Desktop and mobile screenshots confirm the revised lighter visual hierarchy; the mobile hero has a deliberately protected text area above the image to retain clarity.
+
+## Visual Editor Correction — Final Verification
+
+The header’s decorative horizon dash has been removed from the Canyon Outdoor lockup, the superfluous arrow treatment has been removed from text calls to action, and the hero's scroll affordance has been removed. The prior dual-card concept-study section has been rebuilt as one complete outdoor-living environment: a planted pool garden with a fire feature, lounge space, pergola, outdoor kitchen, and dense California planting. Both desktop and mobile reviews confirmed the refreshed section and simplified header treatment render correctly.

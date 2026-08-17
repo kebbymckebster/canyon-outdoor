@@ -94,8 +94,6 @@
 .dark .section-rail { border-left-color: rgba(247, 243, 234, 0.18); }
 .brand-lockup { display: inline-flex; align-items: center; gap: 0.7rem; }
 .brand-lockup__type { display: grid; gap: 0.25rem; min-width: max-content; }
-.brand-lockup__horizon { display: flex; align-items: center; gap: 0.4rem; }
-.brand-lockup__horizon::after { content: ""; display: block; width: 1.75rem; height: 1px; background: currentColor; opacity: 0.55; }
 .spec-corner { position: relative; }
 .spec-corner::before, .spec-corner::after { content: ""; position: absolute; width: 12px; height: 12px; border-color: currentColor; opacity: 0.38; pointer-events: none; }
 .spec-corner::before { left: 0.75rem; top: 0.75rem; border-left: 1px solid; border-top: 1px solid; }

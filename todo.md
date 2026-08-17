@@ -11,3 +11,9 @@
 - [x] Integrate the Canyon Outdoor logo and full name into the floating menu, removing the separate Start a Project action.
 - [x] Generate and apply lusher modern landscape concepts with convincing vegetation and fire or water features.
 - [x] Verify the revised desktop and mobile experience, including a more credible before-and-after relationship.
+
+## Visual Editor Follow-up
+
+- [x] Remove the selected decorative marks and line treatments from the branded header and targeted concept panel.
+- [x] Rebuild the targeted concept area as a fuller outdoor living presentation with greenery, a pool or water feature, and modern gathering-space elements.
+- [x] Verify the manual corrections at desktop and mobile sizes, then save a new checkpoint.
