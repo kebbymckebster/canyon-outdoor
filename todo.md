@@ -45,4 +45,4 @@
 - [x] Add secure server-side inquiry handling with validation, rate limits, safe logging, and clear client error feedback; keep secrets server-only.
 - [x] Center the compact top bar, repair contact-modal contrast, and add the non-contractor business-scope disclosure where appropriate.
 - [x] Move concise About content onto Home, remove the About page and menu entry, and expand Work with water-slide, grotto, outdoor-kitchen, and swim-up-bar concepts.
-- [ ] Scan the project for exposed credentials, verify routes and security controls on desktop and mobile, and save a checkpoint.
+- [x] Scan the project for exposed credentials, verify routes and security controls on desktop and mobile, and save a checkpoint.
