@@ -41,3 +41,9 @@ The revised top bar now presents separate Contact and Menu controls beside the C
 ## Legal Page Verification
 
 Privacy Policy and Terms of Service are now substantive, readable individual routes linked from every footer. Each page states its effective date, explains its scope in plain language, and can be reached directly from desktop and mobile footer links. The Privacy Policy covers collected information, use, sharing, retention, rights, children, and policy changes. The Terms cover site purpose, no-contract notice, acceptable use, submissions, intellectual property, disclaimers, liability limits, governing law, and changes. These are working legal drafts intended for attorney review before publication.
+
+## Secure Deployment and Final Content Verification
+
+The current homepage confirms the compact header is centered at the top of the viewport and the separate About route has been consolidated into a concise studio-context block on the home experience. The new contact overlay opens over a dimmed, blurred page and presents a high-contrast light modal surface with clearly separated controls. The final inquiry step now uses white input fields and dark text instead of transparent fields, and the retained file-upload step has been safely replaced with an optional public inspiration-link field.
+
+The final security verification passed all four automated tests, TypeScript validation, and the production build. The repository scan found no API-key, database, private-key, or credential reference in the client code and no tracked environment files. Server-side secret reads are confined to the server environment contract and database helper. The Work page now includes visually verified concept sections for an integrated waterslide and grotto retreat and a modern outdoor kitchen with swim-up bar.

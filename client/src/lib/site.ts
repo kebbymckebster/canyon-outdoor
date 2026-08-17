@@ -7,6 +7,8 @@ export const ASSETS = {
   detail: "/manus-storage/canyon-green-detail_ce8147b0.jpg",
   patio: "/manus-storage/canyon-patio_196b7aa9.jpg",
   poolLiving: "/manus-storage/canyon-pool-living_94f0951e.jpg",
+  grottoSlide: "/manus-storage/canyon-grotto-slide_25fc7772.jpg",
+  swimUpKitchen: "/manus-storage/canyon-swimup-kitchen_c6b1dc1a.jpg",
   symbol: "/manus-storage/canyon-symbol_92480f48.png",
 };
 
@@ -14,5 +16,4 @@ export const navItems = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "Process", href: "/process" },
-  { label: "About", href: "/about" },
 ];

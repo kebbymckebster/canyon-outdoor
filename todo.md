@@ -38,3 +38,11 @@
 - [x] Reintroduce the detailed multi-step inquiry questions in a background-blurring contact modal.
 - [x] Write and route readable Privacy Policy and Terms of Service pages, then link both from the footer.
 - [x] Verify the contact modal, legal-page routes, footer links, and mobile layout before saving a checkpoint.
+
+## Secure Deployment and Final Content Revision
+
+- [x] Audit frontend and server code for inputs, endpoint exposure, secrets, credentials, file handling, and the current contact flow.
+- [x] Add secure server-side inquiry handling with validation, rate limits, safe logging, and clear client error feedback; keep secrets server-only.
+- [x] Center the compact top bar, repair contact-modal contrast, and add the non-contractor business-scope disclosure where appropriate.
+- [x] Move concise About content onto Home, remove the About page and menu entry, and expand Work with water-slide, grotto, outdoor-kitchen, and swim-up-bar concepts.
+- [ ] Scan the project for exposed credentials, verify routes and security controls on desktop and mobile, and save a checkpoint.

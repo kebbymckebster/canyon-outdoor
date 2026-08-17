@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Public page content is intentionally accessible. Automated callers are additionally constrained by server-side rate limiting.

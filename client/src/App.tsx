@@ -9,18 +9,16 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Services from "./pages/Services";
 import Process from "./pages/Process";
-import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/work" component={Work} />
       <Route path="/services" component={Services} />
       <Route path="/process" component={Process} />
-      <Route path="/about" component={About} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/404" component={NotFound} />

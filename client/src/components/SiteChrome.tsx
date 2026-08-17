@@ -22,7 +22,7 @@ export function SiteHeader() {
   }, [menuOpen, contactOpen]);
 
   return <>
-    <header className="fixed left-0 top-0 z-50 px-4 py-4 sm:px-6">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 py-4 sm:px-6">
       <div className="flex w-fit items-center gap-2 rounded-full border border-white/35 bg-[#f8f7f1]/90 p-1.5 shadow-[0_14px_38px_rgba(21,42,26,0.18)] backdrop-blur-xl">
         <Link href="/" className="rounded-full px-2.5 py-1.5" aria-label="Canyon Outdoor home"><BrandLockup compact /></Link>
         <button onClick={() => setContactOpen(true)} className="rounded-full border border-[#1d2b20]/20 px-3.5 py-2 text-xs font-bold text-[#1d2b20] transition-colors hover:bg-[#e0e7d9]" aria-label="Open contact form">Contact</button>
@@ -35,7 +35,7 @@ export function SiteHeader() {
         <div className="flex items-center justify-between border-b border-white/12 px-5 py-4 sm:px-7"><BrandLockup light compact /><button onClick={() => setMenuOpen(false)} className="grid h-10 w-10 place-items-center rounded-full bg-white text-[#173221]" aria-label="Close menu"><X size={18} /></button></div>
         <div className="relative grid gap-10 overflow-hidden px-6 py-10 sm:grid-cols-[1fr_0.85fr] sm:px-10 sm:py-12"><img src={ASSETS.detail} alt="" className="absolute inset-y-0 right-0 h-full w-1/2 object-cover opacity-20" />
           <nav className="relative grid content-start" aria-label="Site pages"><p className="eyebrow mb-6 text-[#b9d3b5]">Explore Canyon Outdoor</p>{navItems.map(item => <Link onClick={() => setMenuOpen(false)} key={item.href} href={item.href} className="border-t border-white/15 py-3.5 text-3xl font-semibold leading-none transition-colors hover:text-[#b9d3b5] sm:text-4xl">{item.label}</Link>)}</nav>
-          <div className="relative flex flex-col justify-end"><p className="max-w-sm text-lg leading-8 text-white/75">Modern outdoor environments with deeper planting, pools, water, fire, and spaces that invite you to stay outside.</p><div className="mt-12 flex items-center gap-2 text-sm text-white/55"><MapPin size={15} className="text-[#b9d3b5]" />Orange County, California</div></div>
+          <div className="relative flex flex-col justify-end"><p className="max-w-sm text-lg leading-8 text-white/75">Landscape design, outdoor living concepts, hardscape concepts, and property visualization for more time outside.</p><div className="mt-8 flex items-center gap-2 text-sm text-white/55"><MapPin size={15} className="text-[#b9d3b5]" />Orange County, California</div><p className="mt-5 max-w-sm text-xs leading-5 text-white/45">Canyon Outdoor is a concept and visualization studio, not a licensed contractor or construction company.</p></div>
         </div>
       </div>
     </div>
@@ -51,5 +51,5 @@ export function PageIntro({ eyebrow, title, copy, light = false }: { eyebrow: st
 }
 
 export function SiteFooter() {
-  return <footer className="bg-[#173221] py-12 text-white"><div className="container flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><BrandLockup light /><p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Landscape design, outdoor living concepts, hardscape concepts, and property visualization.</p></div><div className="flex flex-col gap-3 text-sm text-white/65 md:items-end"><div className="flex gap-4"><Link href="/privacy" className="hover:text-white">Privacy Policy</Link><Link href="/terms" className="hover:text-white">Terms of Service</Link></div><p className="text-xs text-white/45">© 2026 Canyon Outdoor</p></div></div></footer>;
+  return <footer className="bg-[#173221] py-12 text-white"><div className="container flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><BrandLockup light /><p className="mt-5 max-w-sm text-sm leading-6 text-white/60">Landscape design, outdoor living concepts, hardscape concepts, and property visualization. Canyon Outdoor is not a licensed contractor or construction company.</p></div><div className="flex flex-col gap-3 text-sm text-white/65 md:items-end"><div className="flex gap-4"><Link href="/privacy" className="hover:text-white">Privacy Policy</Link><Link href="/terms" className="hover:text-white">Terms of Service</Link></div><p className="text-xs text-white/45">© 2026 Canyon Outdoor</p></div></div></footer>;
 }
