@@ -50,4 +50,4 @@
 ## Contact Modal Visual-Editor Review
 
 - [x] Inspect and repair unintended inline styling or invalid markup from the applied modal color edit.
-- [ ] Verify the corrected contact-modal contrast and save a checkpoint.
+- [x] Verify the corrected contact-modal contrast and save a checkpoint.
