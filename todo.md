@@ -61,3 +61,37 @@
 
 - [x] Clean redundant inline styling and invalid markup from the Home About-section color edit while preserving the requested #1b2e20 heading color.
 - [x] Verify the cleaned Home section and save a checkpoint.
+
+## Loading, Delivery, and Discoverability Pass
+
+- [x] Audit initial loading, inquiry-delivery configuration, metadata, image delivery, accessibility, and current runtime or build defects.
+- [x] Add ghost loading imagery and text states, apply #1b2e20 to all contact-question headings, and optimize image loading behavior.
+- [x] Configure server-side inquiry email delivery using a secure provider credential and recipient address, with safe delivery-error handling.
+- [x] Add page metadata, canonical URLs, sitemap, robots directives, structured data, and accessibility improvements for search and AI discovery.
+- [x] Run comprehensive tests, build, production SSR, and responsive accessibility checks, then save a verified checkpoint.
+
+## Loading Lifecycle Correction
+
+- [x] Keep the ghost loading shell visible until the full initial route is ready, including non-Home routes without a hero image.
+- [x] Verify the loading shell lifecycle across Home, Work, Services, Process, Privacy, and Terms without a flash or premature dismissal.
+
+## Updated Inquiry Recipient
+
+- [x] Update the secure inquiry recipient to keanebaggettcanyongroup@gmail.com and activate delivery through the configured Formspree endpoint.
+
+## Formspree Delivery
+
+- [x] Replace the blocked Resend sender dependency with the supplied Formspree endpoint while retaining server-side validation, rate limits, and safe delivery-error handling.
+- [x] Validate Formspree delivery configuration and confirm a completed inquiry is accepted by the server without exposing the endpoint in frontend code.
+
+## Evidence-Based Final Validation
+
+- [x] Submit one clearly labeled test inquiry through the actual server inquiry procedure and verify its accepted and delivered security events.
+- [x] Verify each public route’s loader removes only after the document and non-lazy images are ready, with no error path that can trap the page.
+- [x] Run an explicit static accessibility audit of public routes and document any remaining manual-review items.
+- [x] Correct the repeated-primary-heading issue identified by the route audit, preserving one h1 per public route and semantic h2 section headings.
+
+## Production SSR Correction
+
+- [x] Fix the bundled production SSR entry resolution so crawlers receive rendered route content and metadata rather than a client-only shell.
+- [ ] Set CANONICAL_ORIGIN to the final public HTTPS address immediately before publishing so canonical, Open Graph, sitemap, and robots URLs reference the live site.

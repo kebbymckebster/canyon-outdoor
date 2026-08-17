@@ -8,6 +8,7 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import { registerDiscoveryRoutes } from "./discovery";
 import { apiRateLimit, enforceHttps, requestAudit, requestFingerprint, securityHeaders, siteRateLimit } from "../security";
 
 function isPortAvailable(port: number): Promise<boolean> {
@@ -38,6 +39,7 @@ async function startServer() {
   // The public API accepts small structured payloads only. File uploads are intentionally not accepted.
   app.use(express.json({ limit: "100kb", strict: true }));
   app.use(express.urlencoded({ limit: "100kb", extended: false }));
+  registerDiscoveryRoutes(app);
   registerStorageProxy(app);
   registerOAuthRoutes(app);
   app.use("/api", apiRateLimit);

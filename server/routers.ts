@@ -6,6 +6,7 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import * as db from "./db";
 import { consumeRateLimit, logSecurityEvent, requestFingerprint } from "./security";
+import { deliverInquiryEmail } from "./emailDelivery";
 
 const cleanText = (max: number) => z.string().trim().min(1).max(max).transform(value => value.replace(/[<>]/g, "").replace(/\s+/g, " "));
 const optionalText = (max: number) => z.string().trim().max(max).transform(value => value.replace(/[<>]/g, "").replace(/\s+/g, " ")).optional().or(z.literal(""));
@@ -43,6 +44,12 @@ export const appRouter = router({
       if (priorCount >= 5) { logSecurityEvent("security.rate_limited", { scope: "inquiry_persistent", fingerprint }); throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Too many inquiry attempts. Please try again later." }); }
       try {
         await db.createInquiry({ name: input.name, email: input.email, phone: input.phone || null, bestContactTime: input.bestContactTime || null, requestedServices: input.requestedServices.join(", "), propertyType: input.propertyType, location: input.location, projectDetails: input.projectDetails, inspirationUrl: input.inspirationUrl || null, requestFingerprint: fingerprint });
+        try {
+          const delivery = await deliverInquiryEmail(input);
+          logSecurityEvent(delivery.delivered ? "inquiry.email_delivered" : "inquiry.email_not_configured", { fingerprint, serviceCount: input.requestedServices.length });
+        } catch (emailError) {
+          logSecurityEvent("inquiry.email_delivery_failed", { fingerprint, errorType: emailError instanceof Error ? emailError.name : "unknown" });
+        }
         logSecurityEvent("inquiry.accepted", { fingerprint, serviceCount: input.requestedServices.length }); return { success: true } as const;
       } catch (error) { logSecurityEvent("api.error", { route: "inquiry.submit", fingerprint, errorType: error instanceof Error ? error.name : "unknown" }); throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "We could not send the inquiry. Please try again later." }); }
     }),

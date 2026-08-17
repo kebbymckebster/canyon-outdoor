@@ -51,6 +51,8 @@ export function apiRateLimit(req: Request, res: Response, next: NextFunction) {
 }
 
 export function siteRateLimit(req: Request, res: Response, next: NextFunction) {
+	  // Static assets are already cacheable and do not expose records or mutations. Counting every image, font, and bundle against the HTML quota caused normal visual page loads to look abusive.
+	  if (/^\/(assets|manus-storage|__manus__)\//.test(req.path) || /\.(?:avif|css|gif|ico|jpe?g|js|map|png|svg|webp|woff2?)$/i.test(req.path)) return next();
   const result = consumeRateLimit("site", requestFingerprint(req), 360, 5 * 60_000);
   if (!result.allowed) { res.setHeader("Retry-After", String(result.retryAfterSeconds)); log("security.rate_limited", { scope: "site", fingerprint: requestFingerprint(req) }); res.status(429).send("Too many requests. Please try again later."); return; }
   next();

@@ -7,7 +7,7 @@ import { ContactModal } from "@/components/ContactModal";
 
 export function BrandLockup({ light = false, compact = false }: { light?: boolean; compact?: boolean }) {
   return <div className={`brand-lockup ${light ? "text-[#f7f6f0]" : "text-[#173221]"}`}>
-    <img src={ASSETS.symbol} alt="Canyon Outdoor" className={compact ? "h-8 w-8 object-contain" : "h-10 w-10 object-contain"} />
+    <img src={ASSETS.symbol} alt="Canyon Outdoor" className={compact ? "h-8 w-8 object-contain" : "h-10 w-10 object-contain"} decoding="async" />
     <span className="brand-lockup__type text-[0.66rem] font-bold tracking-[0.16em]"><span>CANYON</span><span>OUTDOOR</span></span>
   </div>;
 }
@@ -22,6 +22,7 @@ export function SiteHeader() {
   }, [menuOpen, contactOpen]);
 
   return <>
+    <a href="#main-content" className="sr-only focus:not-sr-only fixed left-4 top-4 z-[80] rounded-full bg-white px-4 py-3 text-sm font-bold text-[#1b2e20] shadow-lg">Skip to main content</a>
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 py-4 sm:px-6">
       <div className="flex w-fit items-center gap-2 rounded-full border border-white/35 bg-[#f8f7f1]/90 p-1.5 shadow-[0_14px_38px_rgba(21,42,26,0.18)] backdrop-blur-xl">
         <Link href="/" className="rounded-full px-2.5 py-1.5" aria-label="Canyon Outdoor home"><BrandLockup compact /></Link>
@@ -33,7 +34,7 @@ export function SiteHeader() {
       <button className="absolute inset-0 bg-[#102015]/45 backdrop-blur-sm" onClick={() => setMenuOpen(false)} aria-label="Close menu overlay" />
       <div className={`menu-surface absolute left-1/2 top-4 w-[calc(100%-2rem)] max-w-[930px] -translate-x-1/2 overflow-hidden rounded-[1.7rem] border border-white/10 text-white transition-all duration-500 ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"}`}>
         <div className="flex items-center justify-between border-b border-white/12 px-5 py-4 sm:px-7"><BrandLockup light compact /><button onClick={() => setMenuOpen(false)} className="grid h-10 w-10 place-items-center rounded-full bg-white text-[#173221]" aria-label="Close menu"><X size={18} /></button></div>
-        <div className="relative grid gap-10 overflow-hidden px-6 py-10 sm:grid-cols-[1fr_0.85fr] sm:px-10 sm:py-12"><img src={ASSETS.detail} alt="" className="absolute inset-y-0 right-0 h-full w-1/2 object-cover opacity-20" />
+        <div className="relative grid gap-10 overflow-hidden px-6 py-10 sm:grid-cols-[1fr_0.85fr] sm:px-10 sm:py-12"><img src={ASSETS.detail} alt="" className="absolute inset-y-0 right-0 h-full w-1/2 object-cover opacity-20" loading="lazy" decoding="async" />
           <nav className="relative grid content-start" aria-label="Site pages"><p className="eyebrow mb-6 text-[#b9d3b5]">Explore Canyon Outdoor</p>{navItems.map(item => <Link onClick={() => setMenuOpen(false)} key={item.href} href={item.href} className="border-t border-white/15 py-3.5 text-3xl font-semibold leading-none transition-colors hover:text-[#b9d3b5] sm:text-4xl">{item.label}</Link>)}</nav>
           <div className="relative flex flex-col justify-end"><p className="max-w-sm text-lg leading-8 text-white/75">Landscape design, outdoor living concepts, hardscape concepts, and property visualization for more time outside.</p><div className="mt-8 flex items-center gap-2 text-sm text-white/55"><MapPin size={15} className="text-[#b9d3b5]" />Orange County, California</div><p className="mt-5 max-w-sm text-xs leading-5 text-white/45">Canyon Outdoor is a concept and visualization studio, not a licensed contractor or construction company.</p></div>
         </div>
@@ -43,9 +44,10 @@ export function SiteHeader() {
   </>;
 }
 
-export function PageIntro({ eyebrow, title, copy, light = false }: { eyebrow: string; title: ReactNode; copy?: string; light?: boolean }) {
+export function PageIntro({ eyebrow, title, copy, light = false, headingLevel = "h1" }: { eyebrow: string; title: ReactNode; copy?: string; light?: boolean; headingLevel?: "h1" | "h2" }) {
+  const Heading = headingLevel;
   return <div className={`grid gap-7 lg:grid-cols-[1.1fr_0.55fr] lg:items-end ${light ? "text-[#f8f7f1]" : "text-[#1d2b20]"}`}>
-    <div><div className="mb-4 flex items-center gap-2"><img src={ASSETS.symbol} alt="" className="h-6 w-6 object-contain" /><p className={`eyebrow ${light ? "text-[#b9d3b5]" : "text-[#52705b]"}`}>{eyebrow}</p></div><h1 className="display max-w-3xl text-5xl font-bold leading-[0.9] md:text-7xl">{title}</h1></div>
+    <div><div className="mb-4 flex items-center gap-2"><img src={ASSETS.symbol} alt="" className="h-6 w-6 object-contain" loading="lazy" decoding="async" /><p className={`eyebrow ${light ? "text-[#b9d3b5]" : "text-[#52705b]"}`}>{eyebrow}</p></div><Heading className="display max-w-3xl text-5xl font-bold leading-[0.9] md:text-7xl">{title}</Heading></div>
     {copy && <p className={`max-w-md text-base leading-7 ${light ? "text-white/70" : "text-[#1d2b20]/67"}`}>{copy}</p>}
   </div>;
 }

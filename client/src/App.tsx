@@ -11,6 +11,8 @@ import Services from "./pages/Services";
 import Process from "./pages/Process";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import { PageReady } from "./components/PageReady";
+import { Head } from "./components/Head";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -33,6 +35,8 @@ function App() {
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
+          <Head />
+          <PageReady />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

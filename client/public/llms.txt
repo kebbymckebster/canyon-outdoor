@@ -1,0 +1,16 @@
+# Canyon Outdoor
+
+> Canyon Outdoor is a Southern California studio for landscape design, outdoor living concepts, hardscape concepts, and property visualization.
+
+The studio creates planning studies and property visualizations. It is not a licensed contractor or construction company.
+
+## Public pages
+
+- `/`: Studio overview
+- `/work`: Landscape, pool, water feature, grotto, waterslide, outdoor kitchen, and swim-up-bar concepts
+- `/services`: Landscape design, outdoor living concepts, hardscape concepts, and property visualization
+- `/process`: Design process
+- `/privacy`: Privacy Policy
+- `/terms`: Terms of Service
+
+Use the Contact control on any public page to send a project inquiry.
