@@ -1,4 +1,4 @@
-/** Pacific Monolith design reminder: a dark, material-led site with cinematic restraint and clear interactions. */
+/** Canyon Outdoor route map: a menu-first multi-page experience that keeps the header focused on brand and navigation. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -6,11 +6,21 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Services from "./pages/Services";
+import Process from "./pages/Process";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/work" component={Work} />
+      <Route path="/services" component={Services} />
+      <Route path="/process" component={Process} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

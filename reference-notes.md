@@ -23,3 +23,9 @@ The site now uses a more legible DM Sans type system, a one-piece logo-and-name 
 ## Visual Editor Correction — Final Verification
 
 The header’s decorative horizon dash has been removed from the Canyon Outdoor lockup, the superfluous arrow treatment has been removed from text calls to action, and the hero's scroll affordance has been removed. The prior dual-card concept-study section has been rebuilt as one complete outdoor-living environment: a planted pool garden with a fire feature, lounge space, pergola, outdoor kitchen, and dense California planting. Both desktop and mobile reviews confirmed the refreshed section and simplified header treatment render correctly.
+
+## Menu-First Route Verification
+
+The refactored home screen now shows only the Canyon Outdoor identity and a single Menu control in the top bar. Opening the menu exposes the complete Work, Services, Process, About, and Contact route list in a dedicated overlay. The live menu opens correctly and each secondary page is discoverable from this interaction instead of being listed in the top bar. The updated home hero uses a continuous multi-stop light gradient that blends the image into the shell background rather than ending at a hard color boundary.
+
+The mobile home hero was refined once more after direct responsive review. Its gradient now stays light and readable through the title and supporting copy, then transitions gradually into the garden image below, maintaining a continuous surface rather than a hard image edge. A codebase search found no remaining em dashes in JSX page copy.

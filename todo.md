@@ -17,3 +17,10 @@
 - [x] Remove the selected decorative marks and line treatments from the branded header and targeted concept panel.
 - [x] Rebuild the targeted concept area as a fuller outdoor living presentation with greenery, a pool or water feature, and modern gathering-space elements.
 - [x] Verify the manual corrections at desktop and mobile sizes, then save a new checkpoint.
+
+## Menu-First Multi-Page Refactor
+
+- [x] Replace the visible desktop page links with a brand-and-menu-only top bar.
+- [x] Move the current single-page sections into dedicated Work, Services, Process, About, and Contact routes reached through the menu.
+- [x] Blend the home hero image seamlessly into the page surface and remove em dashes from all updated copy.
+- [x] Verify direct route navigation, menu behavior, hero rendering, and mobile layouts before saving a checkpoint.
