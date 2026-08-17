@@ -108,19 +108,32 @@ export default function Home() {
 
   return (
     <main className="bg-[#f1eee8] text-[#171a17] selection:bg-[#29433a] selection:text-white">
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-[#171a17]/94 py-3 backdrop-blur-xl" : "py-5"}`}>
-        <div className="container flex items-center justify-between gap-5">
-          <a href="#top" className="group text-[#f7f3ea] transition-transform duration-500 hover:scale-[1.03]" aria-label="Canyon Outdoor home"><BrandLockup compact /></a>
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
-            {navLinks.map(link => <a key={link} href={`#${link.toLowerCase()}`} className="text-xs font-bold tracking-wide text-white/70 transition-colors hover:text-white">{link}</a>)}
-          </nav>
-          <a href="#contact" className="hidden items-center gap-2 rounded-full border border-white/25 bg-white/5 px-4 py-2 text-xs font-bold text-white transition-all hover:border-white hover:bg-white hover:text-[#171a17] sm:flex">Start a Project <ArrowRight size={14} /></a>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-full border border-white/25 text-white lg:hidden" aria-label="Toggle navigation" aria-expanded={menuOpen}>{menuOpen ? <X size={18} /> : <Menu size={18} />}</button>
+      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
+        <div className="container relative flex items-start justify-between gap-3">
+          <a href="#top" className="group z-10 text-[#f7f3ea] transition-transform duration-500 hover:scale-[1.03]" aria-label="Canyon Outdoor home"><BrandLockup compact /></a>
+          <div className="relative z-20 flex items-center gap-1 rounded-[1.15rem] border border-white/10 bg-[#171a17]/90 p-1.5 shadow-[0_16px_40px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+            <span className="hidden px-3 text-[0.6rem] font-bold tracking-[0.14em] text-white/48 sm:block">CANYON_INDEX</span>
+            <button onClick={() => setMenuOpen(!menuOpen)} className="group flex min-h-10 items-center gap-3 rounded-xl bg-[#f7f3ea] px-3 text-[#171a17] transition-colors hover:bg-[#d7c7b0]" aria-label="Toggle navigation" aria-expanded={menuOpen}>
+              <span className="text-[0.62rem] font-bold tracking-[0.13em]">{menuOpen ? "CLOSE" : "MENU"}</span>
+              <span className="grid h-5 w-5 place-items-center rounded-full bg-[#171a17] text-[#f7f3ea]">{menuOpen ? <X size={12} /> : <Menu size={12} />}</span>
+            </button>
+          </div>
+          <a href="#contact" className="z-10 hidden items-center gap-2 rounded-full border border-white/25 bg-[#171a17]/50 px-4 py-2.5 text-xs font-bold text-white shadow-[0_16px_40px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-all hover:border-white hover:bg-white hover:text-[#171a17] md:flex">Start a Project <ArrowRight size={14} /></a>
         </div>
-        <div className={`overflow-hidden bg-[#171a17] transition-[max-height] duration-500 lg:hidden ${menuOpen ? "max-h-96 border-t border-white/10" : "max-h-0"}`}>
-          <nav className="container grid gap-1 py-5" aria-label="Mobile navigation">
-            {navLinks.map((link, index) => <a onClick={() => setMenuOpen(false)} key={link} href={`#${link.toLowerCase()}`} className="flex items-center justify-between border-b border-white/10 py-3 text-lg font-semibold text-white"><span>0{index + 1} — {link}</span><ArrowRight size={18} /></a>)}
-          </nav>
+        <div className={`container absolute left-1/2 top-[calc(100%+0.45rem)] w-full -translate-x-1/2 transition-all duration-500 ${menuOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-4 opacity-0"}`}>
+          <div className="mx-auto max-w-[41rem] overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#1b201b]/[0.97] shadow-[0_28px_70px_rgba(0,0,0,0.38)] backdrop-blur-2xl">
+            <div className="spec-corner grid gap-7 p-6 pt-11 sm:grid-cols-[1fr_0.64fr] sm:p-9 sm:pt-14">
+              <nav className="grid content-start" aria-label="Primary navigation">
+                <p className="eyebrow mb-5 text-[#b7cfbe]">Explore the studio</p>
+                {navLinks.map((link, index) => <a onClick={() => setMenuOpen(false)} key={link} href={`#${link.toLowerCase()}`} className="group flex items-center justify-between border-t border-white/12 py-3 text-[#f7f3ea] transition-colors hover:text-[#d7c7b0]"><span className="display text-[clamp(1.65rem,5vw,2.7rem)] font-semibold leading-none">{link}</span><span className="flex items-center gap-2 text-[0.6rem] font-bold tracking-[0.14em] text-white/42"><span>0{index + 1}</span><ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" /></span></a>)}
+              </nav>
+              <div className="flex flex-col justify-between border-l border-white/12 pl-5 sm:pl-7">
+                <div><BrandLockup compact className="text-white" /><p className="mt-8 text-sm leading-6 text-white/60">A Southern California design studio for outdoor spaces made more legible before decisions are made.</p></div>
+                <div className="mt-10"><p className="eyebrow text-[#b7cfbe]">Field context</p><p className="display mt-3 text-2xl font-semibold leading-none">ORANGE<br />COUNTY, CA</p><a onClick={() => setMenuOpen(false)} href="#contact" className="mt-6 inline-flex items-center gap-2 border-b border-white/45 pb-1 text-xs font-bold text-white transition-colors hover:text-[#d7c7b0]">OPEN A PROJECT BRIEF <ArrowRight size={13} /></a></div>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/12 bg-white/[0.035] px-6 py-3 text-[0.57rem] font-bold tracking-[0.13em] text-white/45 sm:px-9"><span>33.70° N / 117.84° W</span><span>DESIGN WITH THE LAND.</span><span>© 2026 CANYON OUTDOOR</span></div>
+          </div>
         </div>
       </header>
 
