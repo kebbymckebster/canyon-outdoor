@@ -94,4 +94,4 @@
 ## Production SSR Correction
 
 - [x] Fix the bundled production SSR entry resolution so crawlers receive rendered route content and metadata rather than a client-only shell.
-- [ ] Set CANONICAL_ORIGIN to the final public HTTPS address immediately before publishing so canonical, Open Graph, sitemap, and robots URLs reference the live site.
+- [x] Defer CANONICAL_ORIGIN until a free published HTTPS address is available; no custom-domain purchase is required, and the setting can be added later for absolute canonical, Open Graph, sitemap, and robots URLs.
