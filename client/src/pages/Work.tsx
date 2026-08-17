@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Droplets, Flame, Leaf, MoveHorizontal } from "lucide-react";
 import { ASSETS } from "@/lib/site";
 import { PageIntro, SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { QuickContactForm } from "@/components/QuickContactForm";
 
 export default function Work() {
   const [comparison, setComparison] = useState(50);
@@ -15,5 +16,5 @@ export default function Work() {
       <article className="relative mt-14 min-h-[680px] overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#173221] md:min-h-[760px]"><img src={ASSETS.poolLiving} alt="Full contemporary outdoor living space with pool, fire feature, kitchen, and lush planting" className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,28,17,0.88)_0%,rgba(10,28,17,0.48)_36%,rgba(10,28,17,0.05)_68%),linear-gradient(0deg,rgba(10,28,17,0.66)_0%,transparent_45%)]" />
         <div className="relative flex min-h-[680px] max-w-xl flex-col justify-end p-7 md:min-h-[760px] md:p-12"><div className="rounded-[1.25rem] border border-white/15 bg-[#102015]/55 p-6 backdrop-blur-md md:p-7"><div className="flex items-center gap-2 text-sm font-semibold text-[#d5e8cf]"><Droplets size={17} /> Pool + garden living</div><h2 className="display mt-5 text-4xl font-bold leading-[0.9] md:text-6xl">THE WHOLE SPACE,<br />WORKING TOGETHER.</h2><p className="mt-5 max-w-lg text-sm leading-7 text-white/75">A deep-green pool garden designed as one complete outdoor room. Water at the center, a fire feature for evening, an outdoor kitchen for gathering, and dense California planting that makes every edge feel alive.</p><div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-sm text-white/80"><span className="inline-flex items-center gap-2"><Droplets size={15} className="text-[#b9d3b5]" />Reflective pool</span><span className="inline-flex items-center gap-2"><Flame size={15} className="text-[#b9d3b5]" />Fire lounge</span><span className="inline-flex items-center gap-2"><Leaf size={15} className="text-[#b9d3b5]" />Layered planting</span></div></div></div>
       </article></div></section>
-  </main><SiteFooter /></>;
+  </main><QuickContactForm /><SiteFooter /></>;
 }

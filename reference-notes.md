@@ -29,3 +29,7 @@ The header’s decorative horizon dash has been removed from the Canyon Outdoor 
 The refactored home screen now shows only the Canyon Outdoor identity and a single Menu control in the top bar. Opening the menu exposes the complete Work, Services, Process, About, and Contact route list in a dedicated overlay. The live menu opens correctly and each secondary page is discoverable from this interaction instead of being listed in the top bar. The updated home hero uses a continuous multi-stop light gradient that blends the image into the shell background rather than ending at a hard color boundary.
 
 The mobile home hero was refined once more after direct responsive review. Its gradient now stays light and readable through the title and supporting copy, then transitions gradually into the garden image below, maintaining a continuous surface rather than a hard image edge. A codebase search found no remaining em dashes in JSX page copy.
+
+## Compact Header and Distributed Contact Verification
+
+The top bar is now an intentionally small, left-aligned capsule with only the Canyon Outdoor lockup and Menu control. The previous full-width blank portion has been removed. Contact is no longer offered as a dedicated menu route or source page. Instead, a shared compact inquiry surface with name, email, project message, submission feedback, and reset behavior now appears after the primary content on Home, Work, Services, Process, and About. The updated pages were reviewed at desktop and mobile sizes.

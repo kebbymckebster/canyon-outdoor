@@ -20,10 +20,10 @@ export function SiteHeader() {
   }, [menuOpen]);
 
   return <>
-    <header className="fixed inset-x-0 top-0 z-50 px-4 py-4 sm:px-6">
-      <div className="mx-auto flex max-w-[980px] items-center justify-between rounded-full border border-white/35 bg-[#f8f7f1]/88 px-3 py-2 shadow-[0_14px_38px_rgba(21,42,26,0.18)] backdrop-blur-xl">
-        <Link href="/" className="shrink-0" aria-label="Canyon Outdoor home"><BrandLockup compact /></Link>
-        <button onClick={() => setMenuOpen(true)} className="flex items-center gap-2 rounded-full bg-[#1d2b20] px-4 py-2 text-xs font-bold text-white transition-transform active:scale-95" aria-label="Open menu"><span>Menu</span><Menu size={15} /></button>
+    <header className="fixed left-0 top-0 z-50 px-4 py-4 sm:px-6">
+      <div className="flex w-fit items-center gap-2 rounded-full border border-white/35 bg-[#f8f7f1]/90 p-1.5 shadow-[0_14px_38px_rgba(21,42,26,0.18)] backdrop-blur-xl">
+        <Link href="/" className="rounded-full px-2.5 py-1.5" aria-label="Canyon Outdoor home"><BrandLockup compact /></Link>
+        <button onClick={() => setMenuOpen(true)} className="flex items-center gap-2 rounded-full bg-[#1d2b20] px-3.5 py-2 text-xs font-bold text-white transition-transform active:scale-95" aria-label="Open menu"><span>Menu</span><Menu size={15} /></button>
       </div>
     </header>
     <div className={`fixed inset-0 z-[60] transition-opacity duration-300 ${menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`} aria-hidden={!menuOpen}>

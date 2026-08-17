@@ -24,3 +24,10 @@
 - [x] Move the current single-page sections into dedicated Work, Services, Process, About, and Contact routes reached through the menu.
 - [x] Blend the home hero image seamlessly into the page surface and remove em dashes from all updated copy.
 - [x] Verify direct route navigation, menu behavior, hero rendering, and mobile layouts before saving a checkpoint.
+
+## Compact Navigation and Distributed Contact
+
+- [x] Reduce the top bar to a compact logo-and-menu control without unused horizontal space.
+- [x] Remove Contact from the menu and routing, then replace the standalone contact page with a reusable form component.
+- [x] Add the contact form to Home, Work, Services, Process, and About pages with consistent interaction and submission feedback.
+- [x] Verify the compact header and form placement across desktop and mobile routes before saving a checkpoint.
