@@ -74,3 +74,13 @@ The wordmark is an expanded uppercase **CANYON / OUTDOOR** lockup with a small o
 - The **CANYON / OUTDOOR** lockup, horizon rule, and carved contour-C are recurring navigation, section-marker, concept-panel, and footer signatures—not occasional decoration.
 - Capability, environmental, and process content is treated as a field of **architectural specification panels** with site rails, datum lines, and coordinate labels, rather than generic marketing cards.
 - Visual pacing alternates between quiet limestone proposal rooms and immersive charcoal/image thresholds. Photography is distributed across wide exterior views, shadowed hardscape, and planting/material detail so no single outdoor scene carries the whole experience.
+
+## Simplified Environmental Revision
+
+The updated direction uses **DM Sans** for a clearer, warmer, contemporary reading experience. The floating menu is now a single brand-integrated control: the Canyon symbol and full name live inside the top surface, and the redundant project CTA has been removed. Dense site-language—including counts, specification labels, indexes, auxiliary arrows, and coordinate-style noise—has been replaced with comfortable white space, quiet rounded panels, and natural green texture.
+
+The environmental UI takes cues from the supplied SaaS reference without using its branding: soft plant-toned gradient fields, glassy light panels, simple selection pills, large clear typography, and one focused visual per interaction. Concepts are directed toward **lush contemporary California environments** with materially plausible water, fire, shade, and dense layered planting. The before-and-after transformation preserves the source property's camera position and architecture so the comparison is more credible.
+
+### Visual Review Amendments
+
+The simplified interface retains a **Pacific Monolith** rhythm by alternating airy limestone rooms with decisive deep-green thresholds. Display typography uses DM Sans but remains uppercase, bold, tightly composed, and editorial through scale and line breaks. The carved contour-C is a recurring, legible signature in the hero, section headers, conversion surface, navigation, and footer. Image sequences must move between outdoor rooms, shadowed hardscape, water, fire, and planting so the work feels like a complete landscape practice rather than a single repeated garden mood.
