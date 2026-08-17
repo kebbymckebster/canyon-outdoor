@@ -46,3 +46,8 @@
 - [x] Center the compact top bar, repair contact-modal contrast, and add the non-contractor business-scope disclosure where appropriate.
 - [x] Move concise About content onto Home, remove the About page and menu entry, and expand Work with water-slide, grotto, outdoor-kitchen, and swim-up-bar concepts.
 - [x] Scan the project for exposed credentials, verify routes and security controls on desktop and mobile, and save a checkpoint.
+
+## Contact Modal Visual-Editor Review
+
+- [x] Inspect and repair unintended inline styling or invalid markup from the applied modal color edit.
+- [ ] Verify the corrected contact-modal contrast and save a checkpoint.
