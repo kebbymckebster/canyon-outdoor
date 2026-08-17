@@ -51,3 +51,8 @@
 
 - [x] Inspect and repair unintended inline styling or invalid markup from the applied modal color edit.
 - [x] Verify the corrected contact-modal contrast and save a checkpoint.
+
+## Contact Modal Green Color Review
+
+- [x] Clean redundant inline styling and invalid markup from the green modal color edit while preserving the requested #1b2e20 heading color.
+- [ ] Verify the corrected green heading and save a checkpoint.

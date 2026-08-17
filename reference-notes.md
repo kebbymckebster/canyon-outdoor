@@ -51,3 +51,7 @@ The final security verification passed all four automated tests, TypeScript vali
 ## Contact Modal Visual-Editor Correction
 
 The visual editor successfully applied the requested black color but also introduced repetitive inline styles and an invalid styled line-break. The modal source was normalized to one utility class on the first-step heading. A live review confirms that “WHAT ARE YOU IMAGINING?” is now black and readable on the light modal surface, while the buttons, supporting copy, and modal behavior remain unchanged.
+
+## Contact Modal Green Visual-Editor Correction
+
+The requested #1b2e20 dark-green color was retained for the first-step contact heading. Redundant inline colors on surrounding elements, service buttons, icons, and the line break were removed. The live modal review confirms the heading is legible on the warm white form surface, the original contrast hierarchy remains intact, and the JSX structure is clean.
