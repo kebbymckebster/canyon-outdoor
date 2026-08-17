@@ -31,3 +31,10 @@
 - [x] Remove Contact from the menu and routing, then replace the standalone contact page with a reusable form component.
 - [x] Add the contact form to Home, Work, Services, Process, and About pages with consistent interaction and submission feedback.
 - [x] Verify the compact header and form placement across desktop and mobile routes before saving a checkpoint.
+
+## Contact Modal and Legal Pages
+
+- [x] Remove the repeated page-level inquiry forms and add a top-bar contact control beside the Menu button.
+- [x] Reintroduce the detailed multi-step inquiry questions in a background-blurring contact modal.
+- [x] Write and route readable Privacy Policy and Terms of Service pages, then link both from the footer.
+- [x] Verify the contact modal, legal-page routes, footer links, and mobile layout before saving a checkpoint.

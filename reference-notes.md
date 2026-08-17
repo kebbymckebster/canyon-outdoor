@@ -33,3 +33,11 @@ The mobile home hero was refined once more after direct responsive review. Its g
 ## Compact Header and Distributed Contact Verification
 
 The top bar is now an intentionally small, left-aligned capsule with only the Canyon Outdoor lockup and Menu control. The previous full-width blank portion has been removed. Contact is no longer offered as a dedicated menu route or source page. Instead, a shared compact inquiry surface with name, email, project message, submission feedback, and reset behavior now appears after the primary content on Home, Work, Services, Process, and About. The updated pages were reviewed at desktop and mobile sizes.
+
+## Contact Modal Verification
+
+The revised top bar now presents separate Contact and Menu controls beside the Canyon Outdoor lockup. Opening Contact visibly blurs and dims the site underneath, then presents a centered, closable inquiry panel with the restored six-stage project questions: desired work, property type, location, project needs, inspiration upload, and contact details. The panel has a step indicator, keyboard Escape dismissal, overlay dismissal, and an on-screen confirmation state.
+
+## Legal Page Verification
+
+Privacy Policy and Terms of Service are now substantive, readable individual routes linked from every footer. Each page states its effective date, explains its scope in plain language, and can be reached directly from desktop and mobile footer links. The Privacy Policy covers collected information, use, sharing, retention, rights, children, and policy changes. The Terms cover site purpose, no-contract notice, acceptable use, submissions, intellectual property, disclaimers, liability limits, governing law, and changes. These are working legal drafts intended for attorney review before publication.

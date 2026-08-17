@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "wouter";
 import { MapPin, Menu, X } from "lucide-react";
 import { ASSETS, navItems } from "@/lib/site";
+import { ContactModal } from "@/components/ContactModal";
 
 export function BrandLockup({ light = false, compact = false }: { light?: boolean; compact?: boolean }) {
   return <div className={`brand-lockup ${light ? "text-[#f7f6f0]" : "text-[#173221]"}`}>
@@ -13,16 +14,18 @@ export function BrandLockup({ light = false, compact = false }: { light?: boolea
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    document.body.style.overflow = menuOpen || contactOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
+  }, [menuOpen, contactOpen]);
 
   return <>
     <header className="fixed left-0 top-0 z-50 px-4 py-4 sm:px-6">
       <div className="flex w-fit items-center gap-2 rounded-full border border-white/35 bg-[#f8f7f1]/90 p-1.5 shadow-[0_14px_38px_rgba(21,42,26,0.18)] backdrop-blur-xl">
         <Link href="/" className="rounded-full px-2.5 py-1.5" aria-label="Canyon Outdoor home"><BrandLockup compact /></Link>
+        <button onClick={() => setContactOpen(true)} className="rounded-full border border-[#1d2b20]/20 px-3.5 py-2 text-xs font-bold text-[#1d2b20] transition-colors hover:bg-[#e0e7d9]" aria-label="Open contact form">Contact</button>
         <button onClick={() => setMenuOpen(true)} className="flex items-center gap-2 rounded-full bg-[#1d2b20] px-3.5 py-2 text-xs font-bold text-white transition-transform active:scale-95" aria-label="Open menu"><span>Menu</span><Menu size={15} /></button>
       </div>
     </header>
@@ -36,6 +39,7 @@ export function SiteHeader() {
         </div>
       </div>
     </div>
+    <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
   </>;
 }
 
@@ -47,5 +51,5 @@ export function PageIntro({ eyebrow, title, copy, light = false }: { eyebrow: st
 }
 
 export function SiteFooter() {
-  return <footer className="bg-[#173221] py-12 text-white"><div className="container flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><BrandLockup light /><p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Landscape design, outdoor living concepts, hardscape concepts, and property visualization.</p></div><p className="text-xs text-white/45">© 2026 Canyon Outdoor</p></div></footer>;
+  return <footer className="bg-[#173221] py-12 text-white"><div className="container flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><BrandLockup light /><p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Landscape design, outdoor living concepts, hardscape concepts, and property visualization.</p></div><div className="flex flex-col gap-3 text-sm text-white/65 md:items-end"><div className="flex gap-4"><Link href="/privacy" className="hover:text-white">Privacy Policy</Link><Link href="/terms" className="hover:text-white">Terms of Service</Link></div><p className="text-xs text-white/45">© 2026 Canyon Outdoor</p></div></div></footer>;
 }
