@@ -55,3 +55,7 @@ The visual editor successfully applied the requested black color but also introd
 ## Contact Modal Green Visual-Editor Correction
 
 The requested #1b2e20 dark-green color was retained for the first-step contact heading. Redundant inline colors on surrounding elements, service buttons, icons, and the line break were removed. The live modal review confirms the heading is legible on the warm white form surface, the original contrast hierarchy remains intact, and the JSX structure is clean.
+
+## Home Page Green Visual-Editor Correction
+
+The Home-page About section now retains the requested #1b2e20 dark-green “WE SEE MORE THAN A YARD.” heading through a single utility class. The visual editor’s redundant inline styles, unsupported style prop on the brand lockup, and styled line-break markup were removed. A live review confirms the studio section keeps its intended soft-green field, heading prominence, readable body copy, and clean footer transition.
