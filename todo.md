@@ -95,3 +95,7 @@
 
 - [x] Fix the bundled production SSR entry resolution so crawlers receive rendered route content and metadata rather than a client-only shell.
 - [x] Defer CANONICAL_ORIGIN until a free published HTTPS address is available; no custom-domain purchase is required, and the setting can be added later for absolute canonical, Open Graph, sitemap, and robots URLs.
+
+## Contact Modal Color Verification
+
+- [x] Remove unintended broad inline color overrides from the visual-editor patch, retain #1b2e20 on all inquiry-question headings, and verify modal contrast before saving a checkpoint.
